@@ -187,7 +187,6 @@ scene("start", () => {
 		],
 	]
 	const lvlConfig = {
-		// define the size of tile block
 		width: 32,
 		height: 32,
 		"=": () => [
@@ -369,7 +368,6 @@ scene("start", () => {
 		player.move(-SPEED, 0)
 		player.flipX(true)
 		player.isWalkingRight = false
-		// .play() will reset to the first frame of the anim, so we want to make sure it only runs when the current animation is not "run"
 		if (player.isGrounded() && player.curAnim() !== "run") {
 			player.play("run")
 		}
